@@ -4,7 +4,7 @@ This is a simple weather forecast app built with React that provides a five-day 
 
 ## Features
 
-- **Five-Day Forecast:** Provides a detailed forecast for the next five days, including temperature, humidity, and weather conditions.
+- **Five-Day Forecast:** Provides a detailed forecast for the next five days, including temperature and weather conditions.It is displayed after submitting a city name
 - **Temperature Unit Toggle:** Users can switch between Fahrenheit and Celsius to view temperatures in their preferred units.
 
 ## Technologies Used
