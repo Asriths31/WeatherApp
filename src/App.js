@@ -53,7 +53,15 @@ function App(){
         <input className='city-name'  onChange={(e)=>setCityname(e.target.value)}  placeholder='Enter The City Name'></input>
         <button className='submit-btn' onClick={()=>{setCount(e=>e+1) }} ><img src={sub_btn}></img></button>
          <div className='switch' onClick={(e)=>setToggle(!toggle)}>
-           {toggle?<img src={on} alt='toggle on'></img>:<img src={off} alt='toggle off'></img>}
+           {toggle?<div>
+                    <img src={on} alt='toggle on'></img>
+                    <span className='left'>°C</span>
+                    </div> :
+           <div>
+           <img src={off} alt='toggle on'></img>
+           <span className='right'>°F</span>
+           </div>
+           }
          </div>
          </div>
         <div>

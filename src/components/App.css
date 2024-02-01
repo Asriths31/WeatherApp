@@ -65,17 +65,39 @@ body{
   width: 50px;
 }
 .switch{
+  position: relative;
   margin: 16px 0 0 4px;
-  height: 5vh;
+  height: 60px;
+  width: 60px;
+  /* background-color: #ff8f00; */
 }
 .switch img{
   height: 60px;
   width: 60px;
 }
+.left{
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  font-weight:bolder;
+  color: rgb(69, 129, 153);
+  font-size: large;
+}
+.right{
+  position: absolute;
+  top: 18px;
+  left: 35px;
+  font-weight:bolder;
+  color: rgb(69, 129, 153);
+  font-size: large;
+
+
+}
 .forecast{
   width: 70%;
   backdrop-filter: drop-shadow(2px);
    border-radius: 20px;
+   margin-bottom: 14px;
 }
 
 
@@ -121,14 +143,16 @@ body{
   flex-wrap: wrap;
   flex-direction: column;
   margin:40px 10px -30px 10px;
-  width: 600px;
+  width: 650px;
   height: 40vh;
 }
 .char div{
   border-left: 4px solid white;
- width: 40%;
+  width: 40%;
   color: aliceblue;
+  
   margin: 2px;
+
 border-radius: 20px;
 }
 .char div h3{
@@ -144,6 +168,7 @@ border-radius: 20px;
   width: auto;
   color: aliceblue;
   text-align: center;
+  
   background: linear-gradient(130deg,rgb(57, 153, 190),white);
   box-shadow: 0px 20px 16px black;
   border-radius: 20px;
