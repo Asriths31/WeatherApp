@@ -1,0 +1,223 @@
+body{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+   backdrop-filter: blur(10px);  
+   background-color:rgb(57, 153, 190);
+}
+.heading{
+  margin-top: 8vh;
+  color: aliceblue;
+  font-size: 2.5em;
+  text-align: center;
+}
+.container{
+  display: flex;
+  background: linear-gradient(160deg,rgb(57, 153, 190),white);
+  margin:3vh auto 0 auto;
+  border:2px solid aliceblue;
+  border-radius: 20px;
+  width: 70%;
+}
+.curr-wea{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-radius: 20px;
+}
+.input{
+ display: flex;
+ justify-content: center;
+ }
+.city-name{
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 2px solid rgb(69, 129, 153);
+  background:white ;
+  color: rgb(69, 129, 153);
+  padding-left:20px;
+  padding-right: auto;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin:22px 0 0 5px;
+  border-radius: 12px;
+  border: 2px solid rgb(69, 129, 153);
+  background:white;
+  color: #d38080;
+  padding: 20px ;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+ 
+}
+.submit-btn img{
+  height: 50px;
+  width: 50px;
+}
+.switch{
+  margin: 16px 0 0 4px;
+  height: 5vh;
+}
+.switch img{
+  height: 60px;
+  width: 60px;
+}
+.forecast{
+  width: 70%;
+  backdrop-filter: drop-shadow(2px);
+   border-radius: 20px;
+}
+
+
+.hero{
+  display: block;
+  width: 300px;
+  margin: 30px auto 0 auto;
+  color: aliceblue;
+  text-align: center;
+  font-size:  1.5em;
+}
+.hero img{
+ height:90px;
+  width: 90px;
+  margin-bottom: -60px;
+  
+}
+.hero h4{
+  font-size: medium;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.heroname{
+  text-transform: uppercase;
+  color: #ff8f00;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+ position: relative;
+  height: 5vh;
+  
+}
+.logo img{
+  position:absolute ;
+  z-index: 1;
+  animation: popup 4s ,floating 4s infinite;
+}
+.char{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:40px 10px -30px 10px;
+  width: 600px;
+  height: 40vh;
+}
+.char div{
+  border-left: 4px solid white;
+ width: 40%;
+  color: aliceblue;
+  margin: 2px;
+border-radius: 20px;
+}
+.char div h3{
+  margin-left: 16px;
+}
+.char span{
+  color: #ff8f00;
+}
+.block{
+  display: flex;
+  justify-content: space-around;
+  height: 110px;
+  width: auto;
+  color: aliceblue;
+  text-align: center;
+  background: linear-gradient(130deg,rgb(57, 153, 190),white);
+  box-shadow: 0px 20px 16px black;
+  border-radius: 20px;
+}
+.display{
+  height: fit-content;
+}
+.display img,h4,h2{
+  margin-bottom:-30px ;
+}
+.day{
+  color:#ff8f00;
+  margin-bottom: -19px;
+}
+.date{
+  color:#ff8f00;
+}
+@keyframes floating {
+    0%{
+      top:1vh;
+    }
+    
+    50%{
+      top:0vh;
+    }
+   
+    100%{
+      top: 1vh;
+    }
+}
+@keyframes popup {
+  0%{
+    top:5vh;
+  }
+  
+  100%{
+    top:0vh;
+  }
+ 
+}
+@media screen and (max-width:430px) {
+  body{
+    background: linear-gradient(120deg,rgb(57, 153, 190),white);
+    overflow-x: hidden;
+ }
+ .heading{
+  display: none;
+ }
+ .container{
+  display: block;
+  background:transparent;
+  height: 100vh;
+  overflow-x:hidden ;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+ }
+ .curr-wea{
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: -30vh;
+ }
+ .char{
+  display: block;
+ }
+ .forecast{
+  width:100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3,1fr);
+ }
+ 
+}
