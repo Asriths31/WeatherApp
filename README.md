@@ -43,7 +43,7 @@ This is a simple weather forecast app built with React that provides a five-day 
 
 ## Demo
 
-You can view a live demo of the app [here](https://65bb2f0b32a6ae37a0b76e96--steady-sunburst-eedb47.netlify.app/).
+You can view a live demo of the app [here](https://65bb33c91d51a93769a0b628--steady-sunburst-eedb47.netlify.app/).
 
 ## Contributing
 
