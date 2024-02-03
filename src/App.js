@@ -13,7 +13,7 @@ function App(){
   const[data,setData]=React.useState([])
   const[toggle,setToggle]=React.useState(true)
   const[name,setName]=React.useState("London")
-  
+  const[renderforecast,setRenderforecast]=React.useState(0)
   
  
   useEffect(()=>{
@@ -31,6 +31,7 @@ function App(){
       else{
         setData(data.list)
         setName(data.city.name)
+         setRenderforecast(1)
      }
      }
       
@@ -69,7 +70,7 @@ function App(){
          </div>
          </div>
         {toggle?
-        (count? 
+        (renderforecast? 
         <div className='forecast'>
          <ForecastinCel date={data[8].dt_txt} temp={data[8].main.feels_like} weather={data[8].weather[0].description} icon={data[8].weather[0].icon}/>
          <ForecastinCel date={data[16].dt_txt} temp={data[16].main.feels_like} weather={data[16].weather[0].description} icon={data[16].weather[0].icon}/>
@@ -77,7 +78,7 @@ function App(){
           <ForecastinCel date={data[32].dt_txt} temp={data[32].main.feels_like} weather={data[32].weather[0].description} icon={data[32].weather[0].icon}/>
           <ForecastinCel date={data[39].dt_txt} temp={data[39].main.feels_like} weather={data[39].weather[0].description} icon={data[39].weather[0].icon}/>
          </div>:
-         <span> </span>):count?
+         <span> </span>):renderforecast?
          (<div className='forecast'>
          <ForecastinFar date={data[8].dt_txt} temp={data[8].main.feels_like} weather={data[8].weather[0].description} icon={data[8].weather[0].icon}/>
          <ForecastinFar date={data[16].dt_txt} temp={data[16].main.feels_like} weather={data[16].weather[0].description} icon={data[16].weather[0].icon}/>
