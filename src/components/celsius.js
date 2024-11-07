@@ -13,7 +13,13 @@ function Temperatue(props){
         .then(data=>{
          Setdata(data)
          const d='0'+new Date(data.dt*1000)
-         setDate(d.substring(1,16))})
+         console.log(data)
+         setDate(d.substring(1,16))
+         props.setTime(d.substring(17,22))
+         
+      }
+        )
+        
     },[props.count])
     try {if(data!=undefined){
          temp_in_cel=data.main.temp

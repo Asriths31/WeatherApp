@@ -5,8 +5,10 @@ import Temperature from './components/celsius'
 import Fahrenheit from './components/fahrenheit'
 import ForecastinCel from './components/forecastincel'
 import ForecastinFar from './components/forecastinfarhe'
-
-
+import backgroundimage from './images/H8395BQY_output_0.jpeg'
+import backgroundimage1 from './images/e3d71a6573e3cba3516006e01f77d955.webp'
+import dayimage from './images/4661ed2c5f46db41dd62ccb4966e5e4e.jpg'
+import dayimage1 from './images/Untitled Project.jpg'
 function App(){
   const[cityname,setCityname]=React.useState("london")
   const[count,setCount]=React.useState(0)
@@ -14,8 +16,27 @@ function App(){
   const[toggle,setToggle]=React.useState(true)
   const[name,setName]=React.useState("London")
   const[renderforecast,setRenderforecast]=React.useState(0)
+  const[dimensions,setDimensions]=React.useState([])
+  const[time,setTime]=React.useState()
+ window.addEventListener('resize',()=>{
+       setDimensions(window.innerWidth)
+ })
+ if(dimensions<430){
+console.log(time)
+  if(Date.parse("01/01/2000 18:00:00")<Date.parse(`01/01/2000 ${time}`) || Date.parse(`01/01/2000 ${time}`)<Date.parse("01/01/2000 06:00:00"))
+  document.body.style.background=`url(${backgroundimage1}) no-repeat center /cover`
+  else{
+    document.body.style.background=`url(${dayimage}) no-repeat center /cover`
+
+  }
+ }
+ else{
+  if(Date.parse("01/01/2000 18:00:00")<Date.parse(`01/01/2000 ${time}`) || Date.parse(`01/01/2000 ${time}`)<Date.parse("01/01/2000 06:00:00"))
+    document.body.style.background=`url(${backgroundimage}) no-repeat center /cover`
+    else{
+      document.body.style.background=`url(${dayimage1}) no-repeat center /cover`
   
- 
+    } }
   useEffect(()=>{
     let apikey="1333d8b525feeb9eb98c5b4c51a88bb5"
    try{ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityname}&&appid=${apikey}&units=metric&cnt=40`)
@@ -29,6 +50,7 @@ function App(){
         alert("Nothing to Geocode")
       }
       else{
+        // console.log(data)
         setData(data.list)
         setName(data.city.name)
          setRenderforecast(1)
@@ -48,11 +70,14 @@ function App(){
     <>
     <h1 className='heading'>WEATHER FORECAST</h1>
     <div className='container'>
+       <div className='background'></div>
        <div className='curr-wea'>
         <div className='input'>
           
         <input className='city-name'  onChange={(e)=>setCityname(e.target.value)}  placeholder='Enter The City Name'></input>
-        <button className='submit-btn' onClick={()=>{setCount(e=>e+1) }} ><img src={sub_btn}></img></button>
+        <button className='submit-btn' onClick={()=>{setCount(e=>e+1)}} >
+          <img src={sub_btn}></img>
+        </button>
          <div className='switch' onClick={(e)=>setToggle(!toggle)}>
            {toggle?<div>
                     <img src={on} alt='toggle on'></img>
@@ -66,9 +91,10 @@ function App(){
          </div>
          </div>
         <div>
-          {toggle?<Temperature cityname={cityname} count={count} name={name}/>:<Fahrenheit cityname={cityname} count={count} name={name} />}
+          {toggle?<Temperature setTime={setTime} cityname={cityname} count={count} name={name}/>:<Fahrenheit cityname={cityname} count={count} name={name} />}
          </div>
          </div>
+         <div className='scroll'>
         {toggle?
         (renderforecast? 
         <div className='forecast'>
@@ -88,6 +114,10 @@ function App(){
          </div>):<span></span>
           }
           </div>
+           {/* <div className='son'></div> */}
+           
+
+      </div>
           </>
   )
 }
