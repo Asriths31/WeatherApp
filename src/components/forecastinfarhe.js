@@ -12,18 +12,19 @@ function ForecastinFar(props){
    }
    const temperature=conversion(props.temp).toFixed(2)
   return(
-   <div className="block">
-    <div className="display">
-    <img src={img}></img>
-    <h2>{temperature}°F</h2>
-    <h4>{props.weather}</h4>
-    </div>
+    <div className="block">
     <div>
     <h2 className="day">{day}</h2>
     <h4 className="date">{only_date}</h4>
-
-    
     </div>
+    <div className="display">
+    <img src={img}></img>   
+    <h2>{temperature}°F</h2>
+    
+
+    <h4>{props.weather}</h4>
+    </div>
+    
    </div>
     
   )

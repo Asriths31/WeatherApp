@@ -5,10 +5,10 @@ import Temperature from './components/celsius'
 import Fahrenheit from './components/fahrenheit'
 import ForecastinCel from './components/forecastincel'
 import ForecastinFar from './components/forecastinfarhe'
-import backgroundimage from './images/H8395BQY_output_0.jpeg'
+import backgroundimage from './images/steptodown.com537107.jpg'
 import backgroundimage1 from './images/e3d71a6573e3cba3516006e01f77d955.webp'
-import dayimage from './images/4661ed2c5f46db41dd62ccb4966e5e4e.jpg'
-import dayimage1 from './images/Untitled Project.jpg'
+import dayimage from './images/day.jpg'
+import dayimage1 from './images/white-clouds-blue-background.jpg'
 function App(){
   const[cityname,setCityname]=React.useState("london")
   const[count,setCount]=React.useState(0)
@@ -16,13 +16,12 @@ function App(){
   const[toggle,setToggle]=React.useState(true)
   const[name,setName]=React.useState("London")
   const[renderforecast,setRenderforecast]=React.useState(0)
-  const[dimensions,setDimensions]=React.useState([])
+  const[dimensions,setDimensions]=React.useState(window.innerWidth)
   const[time,setTime]=React.useState()
  window.addEventListener('resize',()=>{
        setDimensions(window.innerWidth)
  })
  if(dimensions<430){
-console.log(time)
   if(Date.parse("01/01/2000 18:00:00")<Date.parse(`01/01/2000 ${time}`) || Date.parse(`01/01/2000 ${time}`)<Date.parse("01/01/2000 06:00:00"))
   document.body.style.background=`url(${backgroundimage1}) no-repeat center /cover`
   else{
@@ -65,16 +64,18 @@ console.log(time)
   const on=require('./images/switch-on.png')
   const off=require('./images/switch-off.png')
   const sub_btn=require('./images/submit-btn.png')
-  
+
    return(
     <>
-    <h1 className='heading'>WEATHER FORECAST</h1>
+   <div className='head'> 
+       <h1 className='heading'>WEATHER FORECAST</h1>
+   </div>
     <div className='container'>
        <div className='background'></div>
        <div className='curr-wea'>
         <div className='input'>
           
-        <input className='city-name'  onChange={(e)=>setCityname(e.target.value)}  placeholder='Enter The City Name'></input>
+        <input className='city-name'  onChange={(e)=>setCityname(e.target.value)}  placeholder='Enter The City Name' onKeyDown={(e)=>e.key==="Enter"&&setCount(prev=>prev+1)} ></input>
         <button className='submit-btn' onClick={()=>{setCount(e=>e+1)}} >
           <img src={sub_btn}></img>
         </button>
@@ -118,6 +119,7 @@ console.log(time)
            
 
       </div>
+     
           </>
   )
 }

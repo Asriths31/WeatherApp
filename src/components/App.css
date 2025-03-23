@@ -3,15 +3,17 @@ body{
   align-items: center;
   justify-content: center; */
    /* backdrop-filter: blur(10px);   */
-   /* background-color:#cbd1cb; */
+   /* background-color:rgb(101, 123, 61); */
+   /* background: radial-gradient(rgb(150, 172, 109),rgb(101, 123, 61)); */
    z-index: 2000;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    /* animation: bg-change 4s infinite linear alternate; */
 }
+
 .heading{
-  margin-top: 8vh;
+  margin-top: 0vh;
   color:tomato;
   font-size: 2.5em;
   text-align: center;
@@ -19,13 +21,13 @@ body{
 .container{
   position: relative;
   display: flex;
-  /* background:linear-gradient(370deg,skyblue,rgb(238, 222, 222)); */
+  background:#00000027;
   margin:3vh auto 0 auto;
   border:2px solid aliceblue;
   border-radius: 20px;
   width: 70%;
   z-index: 1;
-  /* animation: rot 4s infinite linear alternate; */
+  
 }
 /* .background{
      position: absolute;
@@ -277,6 +279,16 @@ border-radius: 20px;
     background:linear-gradient(10deg,rgb(243, 239, 239),skyblue);
 
   }
+}
+
+.boxes{
+  height: 100vh;
+}
+.box{
+  height: 300px;
+  width: 300px;
+  z-index: 9999;
+  border: 2px solid black;
 }
 @keyframes bg-change{
   0%{

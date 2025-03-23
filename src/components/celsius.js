@@ -12,9 +12,11 @@ function Temperatue(props){
         .then(response=>response.json())
         .then(data=>{
          Setdata(data)
-         const d='0'+new Date(data.dt*1000)
+         const d=(new Date((data.dt+data.timezone)*1000)).toUTCString()
+
          console.log(data)
-         setDate(d.substring(1,16))
+         setDate(d.substring(0,16))
+         console.log(d.substring(17,22))
          props.setTime(d.substring(17,22))
          
       }

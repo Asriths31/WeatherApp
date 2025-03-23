@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.42c8f1c4.css",
-    "main.js": "/static/js/main.b4720527.js",
+    "main.css": "/static/css/main.db83f04c.css",
+    "main.js": "/static/js/main.92a1571f.js",
     "static/js/787.1937f22b.chunk.js": "/static/js/787.1937f22b.chunk.js",
-    "static/media/Untitled Project.jpg": "/static/media/Untitled Project.1d905e3d4693c67e022a.jpg",
-    "static/media/H8395BQY_output_0.jpeg": "/static/media/H8395BQY_output_0.bd8fb9bb62e6b5b7f717.jpeg",
-    "static/media/jpg": "/static/media/4661ed2c5f46db41dd62ccb4966e5e4e.10439ce741cdd2744628.jpg",
+    "static/media/white-clouds-blue-background.jpg": "/static/media/white-clouds-blue-background.ba1c85220beed6410f09.jpg",
+    "static/media/steptodown.com537107.jpg": "/static/media/steptodown.com537107.34b5e7bd067dea851862.jpg",
+    "static/media/day.jpg": "/static/media/day.4b5895be648843b72478.jpg",
     "static/media/webp": "/static/media/e3d71a6573e3cba3516006e01f77d955.da09bfbad311c18f1e86.webp",
     "index.html": "/index.html",
-    "main.42c8f1c4.css.map": "/static/css/main.42c8f1c4.css.map",
-    "main.b4720527.js.map": "/static/js/main.b4720527.js.map",
+    "main.db83f04c.css.map": "/static/css/main.db83f04c.css.map",
+    "main.92a1571f.js.map": "/static/js/main.92a1571f.js.map",
     "787.1937f22b.chunk.js.map": "/static/js/787.1937f22b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42c8f1c4.css",
-    "static/js/main.b4720527.js"
+    "static/css/main.db83f04c.css",
+    "static/js/main.92a1571f.js"
   ]
 }
